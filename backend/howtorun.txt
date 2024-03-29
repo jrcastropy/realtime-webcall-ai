@@ -1,0 +1,4 @@
+if USE_NGROK and NGROK_AUTHTOKEN is in env file
+    - uvicorn server:app
+if not
+    - USE_NGROK=True NGROK_AUTHTOKEN=<AUTHTOKEN> uvicorn server:app

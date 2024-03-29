@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"  # Forward host port 8000 to container port 8000
+    env_file:
+      - .env
+    command: uvicorn server:app --reload --port 8000 --host 0.0.0.0
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"  # Forward host port 3000 to container port 3000
+    env_file:
+      - .env
+    depends_on:
+      - backend  # Ensure frontend service is up before starting backend
+    command: npm start
