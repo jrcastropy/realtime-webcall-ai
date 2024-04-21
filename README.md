@@ -15,3 +15,7 @@ step-by-step guide on setting up Web Call.
 Step 1: `npm install`
 
 Step 2: `npm start`
+
+## Run this Docker
+
+docker compose up --build

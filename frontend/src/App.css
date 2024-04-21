@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+body {
+    background-color: rgb(59, 46, 98) !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.padCustom {
+    background-color: rgba(108, 117, 125, 0.4);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.glowing {
+  animation: glow-animation 1s infinite alternate;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes glow-animation {
   to {
-    transform: rotate(360deg);
+    box-shadow: 0 0 20px #fff;
   }
+}
+
+.chatBox {
+    height: 90vh;
+}
+
+.innerChatBox {
+    max-height: 80vh;
+    overflow-y: auto;
 }

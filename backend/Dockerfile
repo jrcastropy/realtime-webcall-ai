@@ -1,6 +1,6 @@
 FROM python:3.12
 
-WORKDIR /code
+WORKDIR /backend
 
 COPY requirements.txt .
 COPY llm.py .

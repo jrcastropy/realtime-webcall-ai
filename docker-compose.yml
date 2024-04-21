@@ -15,4 +15,4 @@ services:
       - .env
     depends_on:
       - backend  # Ensure frontend service is up before starting backend
-    command: npm start
+    command: npm run dev
